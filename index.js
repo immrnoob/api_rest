@@ -38,7 +38,7 @@ const resolvers = {
     },
 };
 
-const server = new ApolloServer({ typeDefs: tipoUsuarios, resolvers });
+const server = new ApolloServer({ typeDefs: tipoUsuarios, resolvers, introspection: true });
 
 // Inicia el servidor en el puerto 4000
 server.listen().then(({ url }) => {
